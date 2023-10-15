@@ -19,4 +19,7 @@ Looking at Digilent's documentation, PMODs are only supported till Vivado 2019.1
 NOTE: I tried to get the smallest install package so I chose a random engineering sample board during install (the installer forces you to install a device package). However, what I didnt know was that I need to install a Xilinx chip family that I will be using. In the case of the Zybo Z7, that is the Zynq 7000 SoC. Dont be like me and try to get a smaller install pacakage, only to find out this doesnt work and you have to sit through hours of install again.
 
 For those wondering, it is about 30 GBs
+
+Now just follow the Digilent Docs to add the board to Vivado and it should show up as a board option when creating a Vivado project
+
 ## Now its time to create projects!
