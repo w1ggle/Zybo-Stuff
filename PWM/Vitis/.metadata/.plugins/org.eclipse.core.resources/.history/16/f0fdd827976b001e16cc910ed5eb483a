@@ -230,7 +230,7 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 			goto err;
 		}
 
-		xil_printf("Duty Cycle = %d\r\n", DutyCycle);
+		xil_printf("PWM Configured for Duty Cycle = %d\r\n", DutyCycle);
 
 		/* Enable PWM */
 		XTmrCtr_PwmEnable(TmrCtrInstancePtr);

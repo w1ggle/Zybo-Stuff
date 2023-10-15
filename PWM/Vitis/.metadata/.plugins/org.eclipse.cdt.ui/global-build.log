@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_1_wrapper'
 
-16:06:40 **** Incremental Build of configuration Debug for project PWM_LED ****
+16:11:55 **** Incremental Build of configuration Debug for project PWM_LED ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -19,10 +19,10 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size PWM_LED.elf  |tee "PWM_LED.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  33814	   1936	  22656	  58406	   e426	PWM_LED.elf
+  33750	   1936	  22656	  58342	   e3e6	PWM_LED.elf
 'Finished building: PWM_LED.elf.size'
 ' '
-16:06:41 **** Incremental Build of configuration Debug for project PWM_LED_system ****
+16:11:56 **** Incremental Build of configuration Debug for project PWM_LED_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 51186 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/system.bif

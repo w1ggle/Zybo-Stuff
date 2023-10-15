@@ -9088,3 +9088,694 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-45: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:06:57.953
 !MESSAGE XSCT command with result: [disconnect tcfchan#89], Result: [null, ]. Thread: Thread-2674
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:53.505
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss ], Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:55.269
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:55.270
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:55.271
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.5",
+}]. Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-10-15 16:11:55.272
+!MESSAGE Generating MD5 hash for file: C:\Users\Isaiah\Documents\Zybo-Z7-Diaries\PWM\Vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:55.273
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:11:55.274
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-124: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:00.496
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.562
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.609
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.657
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.704
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.736
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.800
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.864
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.864
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.911
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:02.958
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.006
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.006
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.007
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.007
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.007
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.008
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.008
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.008
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.009
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.009
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.010
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.010
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#91]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.010
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.011
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.011
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.011
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.011
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.012
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.012
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.012
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.012
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.012
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.013
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.013
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.013
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.013
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.014
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.014
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.014
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.014
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.015
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.015
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.015
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.015
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2023-10-15 16:12:03.016
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.284
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.285
+!MESSAGE XSCT Command: [version -server], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.287
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2021.1]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.287
+!MESSAGE XSCT Command: [version], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.287
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2021.1
+SW Build 1933 on 2021-06-09-14:19:58
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.288
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.293
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.294
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.310
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.310
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.315
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.316
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.331
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.332
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.337
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.337
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.353
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.354
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.359
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.359
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.375
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.375
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.380
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.381
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.397
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.397
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.402
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.403
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.418
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.419
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B7BDF4A" && level == 0}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.435
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B7BDF4A" && level == 0}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.436
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.436
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.437
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.444
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.444
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.516
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:03.517
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.529
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.541
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.547
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B7BDF4A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.547
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.563
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.564
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.606
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:06.606
+!MESSAGE XSCT Command: [fpga -file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:08.938
+!MESSAGE XSCT command with result: [fpga -file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:08.956
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:08.964
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:08.965
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.018
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_46]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.018
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.019
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.020
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.032
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.033
+!MESSAGE XSCT Command: [source C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.035
+!MESSAGE XSCT command with result: [source C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.035
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.308
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.308
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.313
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.314
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.321
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.322
+!MESSAGE XSCT Command: [dow C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.497
+!MESSAGE XSCT command with result: [dow C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.497
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.531
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.542
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.556
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.557
+!MESSAGE XSCT Command: [con], Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.579
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-136: Launching Debugger_PWM_LED-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.594
+!MESSAGE XSCT Command: [disconnect tcfchan#91], Thread: Thread-2737
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-15 16:12:09.596
+!MESSAGE XSCT command with result: [disconnect tcfchan#91], Result: [null, ]. Thread: Thread-2737
