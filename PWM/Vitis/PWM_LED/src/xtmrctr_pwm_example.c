@@ -73,6 +73,7 @@
 #define CYCLE_PER_DUTYCYCLE     2           /* Clock cycles per duty cycle */ //cant seem to make this go lower, this is how many periods run per duty cycle
 //#define CYCLE_PER_DUTYCYCLE     10           /* Clock cycles per duty cycle */
 #define MAX_DUTYCYCLE           100          /* Max duty cycle */
+#define MIN_DUTYCYCLE           0          /* Min duty cycle */
 //#define DUTYCYCLE_DIVISOR       4            /* Duty cycle Divisor */
 //#define WAIT_COUNT              PWM_PERIOD   /* Interrupt wait counter */
 #define WAIT_COUNT              0   /* Interrupt wait counter */ //no clue what this does
@@ -203,7 +204,16 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 	 */
 	//Div = DUTYCYCLE_DIVISOR;
 
-	u32 startDutyCycle = 1; //start at 1% duty cycle
+	int UP = 0; //setting function to increase == 1, to decrease == 0, control this with a button?
+
+	u32 settingDutyCycle;
+
+	if (UP == 1){
+		settingDutyCycle = 1; //start at 1% duty cycle
+	} else {
+		settingDutyCycle = 99; //start at 99% duty cycle
+	}
+
 	/* Configure PWM */
 	do {
 		/* Fail check for 0 divisor */
@@ -219,8 +229,8 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 		Period = PWM_PERIOD;
 		//HighTime = PWM_PERIOD / Div--;
 
-		HighTime = (PWM_PERIOD / 100) * startDutyCycle; //getting the duty cycle percentage
-		//xil_printf("%d\r\n", startDutyCycle);
+		HighTime = (PWM_PERIOD / 100) * settingDutyCycle; //getting the duty cycle percentage
+		//xil_printf("%d\r\n", settingDutyCycle);
 		//xil_printf("%d\r\n", Period);
 		//xil_printf("%d\r\n", HighTime);
 		DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
@@ -251,14 +261,21 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 			}
 		}
 
-		startDutyCycle = startDutyCycle + 1; //add to the duty cycle
 
-		if (startDutyCycle == 99){ //if 99, restart
-			startDutyCycle = 1;
-		}
+		if (UP == 1){
+				settingDutyCycle = settingDutyCycle + 1; //add to the duty cycle
+				if (settingDutyCycle == 99){ //if 99, restart
+							settingDutyCycle = 1;
+				}
+			} else {
+				settingDutyCycle = settingDutyCycle - 1; //subtract from the duty cycle
+				if (settingDutyCycle == 1){ //if 1, restart
+					settingDutyCycle = 99;
+				}
+			}
 
 
-	} while (DutyCycle < MAX_DUTYCYCLE);
+	} while ((MIN_DUTYCYCLE < DutyCycle) && (DutyCycle < MAX_DUTYCYCLE)); //used 1 and 99 as mins and max bc idk what happens if you make these <= instead of just < and vice versa
 
 	Status = XST_SUCCESS;
 err:
