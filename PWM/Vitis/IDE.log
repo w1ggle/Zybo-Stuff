@@ -2675,3 +2675,10 @@ configparams force-mem-access 0
 ----------------End of Script----------------
 
 17:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:02:00 INFO  : 'con' command is executed.
+17:02:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:02:00 INFO  : Disconnected from the channel tcfchan#106.
