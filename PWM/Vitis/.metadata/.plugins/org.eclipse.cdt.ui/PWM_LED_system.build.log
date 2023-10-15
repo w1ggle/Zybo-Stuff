@@ -1,0 +1,10 @@
+16:06:41 **** Incremental Build of configuration Debug for project PWM_LED_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51186 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/system.bif --bitstream C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:06:45 Build Finished (took 3s.936ms)
+

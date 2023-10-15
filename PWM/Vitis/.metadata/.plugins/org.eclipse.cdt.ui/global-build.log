@@ -1,0 +1,31 @@
+Nothing to build in platform 'design_1_wrapper'
+
+16:06:40 **** Incremental Build of configuration Debug for project PWM_LED ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/xtmrctr_pwm_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+'Finished building: ../src/xtmrctr_pwm_example.c'
+' '
+'Building target: PWM_LED.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "PWM_LED.elf"  ./src/xtmrctr.o ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PWM_LED.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PWM_LED.elf  |tee "PWM_LED.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33814	   1936	  22656	  58406	   e426	PWM_LED.elf
+'Finished building: PWM_LED.elf.size'
+' '
+16:06:41 **** Incremental Build of configuration Debug for project PWM_LED_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51186 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/system.bif --bitstream C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
