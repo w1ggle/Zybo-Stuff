@@ -2682,3 +2682,156 @@ con
 ----------------End of Script----------------
 
 17:02:00 INFO  : Disconnected from the channel tcfchan#106.
+18:03:21 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:03:41 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:04:26 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:08:10 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:08:13 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa is already opened
+
+18:08:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:08:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7BDF4A' is selected.
+18:08:38 INFO  : 'jtag frequency' command is executed.
+18:08:38 INFO  : Context for 'APU' is selected.
+18:08:38 INFO  : System reset is completed.
+18:08:41 INFO  : 'after 3000' command is executed.
+18:08:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}' command is executed.
+18:08:44 INFO  : Device configured successfully with "C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit"
+18:08:44 INFO  : Context for 'APU' is selected.
+18:08:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:08:44 INFO  : 'configparams force-mem-access 1' command is executed.
+18:08:44 INFO  : Context for 'APU' is selected.
+18:08:44 INFO  : Sourcing of 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl' is done.
+18:08:44 INFO  : 'ps7_init' command is executed.
+18:08:44 INFO  : 'ps7_post_config' command is executed.
+18:08:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:44 INFO  : The application 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:08:44 INFO  : 'configparams force-mem-access 0' command is executed.
+18:08:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}
+fpga -file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:08:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:44 INFO  : 'con' command is executed.
+18:08:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:08:44 INFO  : Disconnected from the channel tcfchan#108.
+18:13:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Isaiah\Documents\Zybo-Z7-Diaries\PWM\Vitis\temp_xsdb_launch_script.tcl
+18:13:32 INFO  : XSCT server has started successfully.
+18:13:32 INFO  : plnx-install-location is set to ''
+18:13:32 INFO  : Successfully done setting XSCT server connection channel  
+18:13:32 INFO  : Successfully done setting workspace for the tool. 
+18:13:33 INFO  : Platform repository initialization has completed.
+18:13:33 INFO  : Registering command handlers for Vitis TCF services
+18:13:33 INFO  : Successfully done query RDI_DATADIR 
+18:14:08 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:14:12 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa is already opened
+
+18:14:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7BDF4A' is selected.
+18:14:27 INFO  : 'jtag frequency' command is executed.
+18:14:27 INFO  : Context for 'APU' is selected.
+18:14:28 INFO  : System reset is completed.
+18:14:31 INFO  : 'after 3000' command is executed.
+18:14:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}' command is executed.
+18:14:33 INFO  : Device configured successfully with "C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit"
+18:14:33 INFO  : Context for 'APU' is selected.
+18:14:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:14:33 INFO  : 'configparams force-mem-access 1' command is executed.
+18:14:33 INFO  : Context for 'APU' is selected.
+18:14:33 INFO  : Sourcing of 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl' is done.
+18:14:33 INFO  : 'ps7_init' command is executed.
+18:14:33 INFO  : 'ps7_post_config' command is executed.
+18:14:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:34 INFO  : The application 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:14:34 INFO  : 'configparams force-mem-access 0' command is executed.
+18:14:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}
+fpga -file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:14:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:34 INFO  : 'con' command is executed.
+18:14:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:14:34 INFO  : Disconnected from the channel tcfchan#2.
+18:14:53 INFO  : Checking for BSP changes to sync application flags for project 'PWM_LED'...
+18:15:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7BDF4A' is selected.
+18:15:05 INFO  : 'jtag frequency' command is executed.
+18:15:07 INFO  : Context for 'APU' is selected.
+18:15:08 INFO  : System reset is completed.
+18:15:11 INFO  : 'after 3000' command is executed.
+18:15:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}' command is executed.
+18:15:16 INFO  : Device configured successfully with "C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit"
+18:15:16 INFO  : Context for 'APU' is selected.
+18:15:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:15:16 INFO  : 'configparams force-mem-access 1' command is executed.
+18:15:16 INFO  : Context for 'APU' is selected.
+18:15:16 INFO  : Sourcing of 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl' is done.
+18:15:16 INFO  : 'ps7_init' command is executed.
+18:15:16 INFO  : 'ps7_post_config' command is executed.
+18:15:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:16 INFO  : The application 'C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:15:16 INFO  : 'configparams force-mem-access 0' command is executed.
+18:15:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7BDF4A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7BDF4A-23727093-0"}
+fpga -file C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Isaiah/Documents/Zybo-Z7-Diaries/PWM/Vitis/PWM_LED/Debug/PWM_LED.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:15:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:16 INFO  : 'con' command is executed.
+18:15:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:15:16 INFO  : Disconnected from the channel tcfchan#3.

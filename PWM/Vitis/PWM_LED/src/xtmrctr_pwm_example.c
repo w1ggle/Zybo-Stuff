@@ -204,7 +204,7 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 	 */
 	//Div = DUTYCYCLE_DIVISOR;
 
-	int UP = 0; //setting function to increase == 1, to decrease == 0, control this with a button?
+	int UP = 1; //setting function to increase == 1, to decrease == 0, control this with a button?
 
 	u32 settingDutyCycle;
 
