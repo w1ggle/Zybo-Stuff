@@ -23,3 +23,5 @@ For those wondering, it is about 30 GBs
 Now just follow the Digilent Docs to add the board to Vivado and it should show up as a board option when creating a Vivado project
 
 ## Now its time to create projects!
+
+I will start by following the official Zynq tutorial book and follow other guides that I find online 
