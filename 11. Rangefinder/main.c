@@ -1,18 +1,11 @@
 //need .elf boot.bin and system.bif for SD card portabililty. It appears to boot fine without system.bif
-
-#include "xgpio.h"
-#include "xscugic.h"
-//#include "xil_exception.h"
-//#include <stdio.h> i think this is for keyboard presses
-
-
-
-
+#include "xgpio.h" //for leds and button
+#include "xscugic.h" //for interrupts
+#include "xil_exception.h" //needed when setting up interrupts
+#include "sleep.h" //for sleeping between polls
+#include "xparameters.h" //for addresses to PMODs
+#include "PmodOLED.h" //PMOD functions
 #include "PmodMAXSONAR.h"
-#include "sleep.h"
-#include "xparameters.h"
-
-#include "PmodOLED.h"
 
 //global vars
 #define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_1_AXI_LITE_GPIO_BASEADDR
@@ -138,7 +131,7 @@ void DemoRun() {
       OLED_SetCursor(&myOLED, 0, 0); //move cursor to top left corner
       OLED_PutString(&myOLED, measured); // output string (distance and unit)
       OLED_Update(&myOLED); //update screen
-      usleep(100000); // delay (if not program crashes bc it polls too fast lol)
+      usleep(100000); // delay so you can read the data, can remove to make it more responsive
 
    }
 }
@@ -206,7 +199,7 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
 	// Call to interrupt setup
 	status = InterruptSystemSetup(&INTCInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-	
+
 	// Connect GPIO interrupt to handler
 	status = XScuGic_Connect(&INTCInst, INTC_GPIO_INTERRUPT_ID, (Xil_ExceptionHandler)BTN_Intr_Handler, (void *)GpioInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
@@ -217,7 +210,7 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
 
 	// Enable GPIO and timer interrupts in the controller
 	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
-	
+
 	return XST_SUCCESS;
 }
 
