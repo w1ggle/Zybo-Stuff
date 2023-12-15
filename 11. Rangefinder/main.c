@@ -1,152 +1,103 @@
-/*
- * interrupt_counter_tut_2B.c
- *
- *  Created on: 	Unknown
- *      Author: 	Ross Elliot
- *     Version:		1.1
- */
-
-/********************************************************************************************
-
-* VERSION HISTORY
-********************************************************************************************
-* 	v1.1 - 01/05/2015
-* 		Updated for Zybo ~ DN
-*
-*	v1.0 - Unknown
-*		First version created.
-*******************************************************************************************/
+//need .elf boot.bin and system.bif for SD card portabililty
 
 #include "xparameters.h"
-#include "xgpio.h"
-#include "xscugic.h"
-#include "xil_exception.h"
-#include "xil_printf.h"
 
+#include "xgpio.h"
+
+#include "xscugic.h"
+
+#include "xil_exception.h"
+
+#include "xil_printf.h"
 #include <stdio.h>
 #include "PmodOLED.h"
 #include "sleep.h"
-#include "xil_cache.h"
 #include "xil_printf.h"
 #include "xparameters.h"
-
 #include "PmodMAXSONAR.h"
+
+
+//global vars
 
 #define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_1_AXI_LITE_GPIO_BASEADDR
 
-#ifdef __MICROBLAZE__
-#define CLK_FREQ XPAR_CPU_M_AXI_DP_FREQ_HZ
-#else
 #define CLK_FREQ 100000000 // FCLK0 frequency not found in xparameters.h
-#endif
 
-/* ------------------------------------------------------------ */
-/*                  Global Variables                            */
-/* ------------------------------------------------------------ */
-
-PmodOLED myDevice;
-PmodMAXSONAR mySONAR;
-
-// Parameter definitions
 #define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
 #define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
+
 #define LEDS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+
 #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 
 #define BTN_INT 			XGPIO_IR_CH1_MASK
 
+
+
+PmodOLED myOLED;
+
+PmodMAXSONAR mySONAR;
+
 XGpio LEDInst, BTNInst;
+
 XScuGic INTCInst;
-static int led_data;
-//static int btn_value;
 
-//----------------------------------------------------
-// PROTOTYPE FUNCTIONS
-//----------------------------------------------------
+
+char *units = "inches";
+int *led_threshholds;
+
+int state = 1;
+
+
+
 static void BTN_Intr_Handler(void *baseaddr_p);
-static int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
-static int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
 
+static int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+
+static int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
 int DemoInitialize();
 void DemoRun();
-void DemoCleanup();
-void EnableCaches();
-void DisableCaches();
-
-// To change between PmodOLED and OnBoardOLED is to change Orientation
-const u8 orientation = 0x0; // Set up for Normal PmodOLED(false) vs normal
-                            // Onboard OLED(true)
-const u8 invert = 0x0; // true = whitebackground/black letters
-                       // false = black background /white letters
-
-//----------------------------------------------------
-// INTERRUPT HANDLER FUNCTIONS
-// - called by the timer, button interrupt, performs
-// - LED flashing
-//----------------------------------------------------
-
-char *units;
-//char c = inbyte();
-//if (c == 'f')
-
-//else
-//	   units = "inches";
-
-int counter = 1;
-
-void BTN_Intr_Handler(void *InstancePtr)
-{
-	// Disable GPIO interrupts
-	XGpio_InterruptDisable(&BTNInst, BTN_INT);
-	// Ignore additional button presses
-	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
-			BTN_INT) {
-			return;
-		}
-	//btn_value = XGpio_DiscreteRead(&BTNInst, 1);
-	// Increment counter based on button value
-
-
-	if (XGpio_DiscreteRead(&BTNInst, 1) > 0){
-		if (counter == 1) {
-			units = "feet";
-
-			counter = 0;
-		}
-		else if (counter == 0) {
-			units = "inches";
-			counter = 1;
-		}
-	}
 
 
 
-    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
-    // Enable GPIO interrupts
-    XGpio_InterruptEnable(&BTNInst, BTN_INT);
-}
-
-//----------------------------------------------------
-// MAIN FUNCTION
-//----------------------------------------------------
 int main (void)
+
 {
 
 
 
+  int status;
 
 
-  DemoInitialize();
+
+  status = DemoInitialize();
   DemoRun();
-  DemoCleanup();
 
-  return 0;
+
+
+  return status;
+
 }
+
 
 int DemoInitialize() {
-   EnableCaches();
-   OLED_Begin(&myDevice, XPAR_PMODOLED_0_AXI_LITE_GPIO_BASEADDR,
-         XPAR_PMODOLED_0_AXI_LITE_SPI_BASEADDR, orientation, invert);
+
+
+
+
+   // To change between PmodOLED and OnBoardOLED is to change Orientation
+
+   const u8 orientation = 0x0; // Set up for Normal PmodOLED(false) vs normal
+
+                               // Onboard OLED(true)
+
+   const u8 invert = 0x0; // true = whitebackground/black letters
+
+                          // false = black background /white letters
+
+
+   OLED_Begin(&myOLED, XPAR_PMODOLED_0_AXI_LITE_GPIO_BASEADDR, XPAR_PMODOLED_0_AXI_LITE_SPI_BASEADDR, orientation, invert);
    MAXSONAR_begin(&mySONAR, PMOD_MAXSONAR_BASEADDR, CLK_FREQ);
 
    int status;
@@ -171,163 +122,205 @@ int DemoInitialize() {
    return status;
 }
 
-/* ------------------------------------------------------------ */
-/*** DemoRun()
-**
-**   Parameters:
-**      none
-**
-**   Return Value:
-**      none
-**
-**   Errors:
-**      If the demo is shut down without properly exiting, does not reinitialize
-**      properly.
-**
-**   Description:
-**      Displays Demo message and each available Fill Pattern.
-**      Pauses between runs to check if user wants to continue, if not, exits.
-**      To be safe, exit through prompt before closing demo.
-**      Requires UART connection to terminal program on PC.
-*/
-
-
-int in[] = {25, 50, 75, 100};
-int ft[] = {5, 10, 15, 20};
-
-int led_threshholds[];
 void DemoRun() {
 
-   //make a unit selections
-    OLED_SetCharUpdate(&myDevice, 0);
-    OLED_ClearBuffer(&myDevice);
-    OLED_SetCursor(&myDevice, 0, 0); //top left corner
-	OLED_PutString(&myDevice, "Default = inches\npress button = switch units");
-    OLED_Update(&myDevice); //update
-    usleep(10000000); //delay?
-   units = "inches";
+	OLED_PutString(&myOLED, "Default = inches\npress button = switch units"); //startup screen
+    usleep(5000000); //give user 5 seconds to read it
 
 
-   //outputting to display
-   char *measure;
    u32 dist;
+
+   u8 lastData = 0;
+
+   u8 led_data;
+
+   char *measured;
+
+
    while (1) {
-      OLED_SetCharUpdate(&myDevice, 0);
-      OLED_ClearBuffer(&myDevice);
-      OLED_SetCursor(&myDevice, 0, 0); //top left corner
+      OLED_SetCharUpdate(&myOLED, 0); //pause screen
 
-      dist = MAXSONAR_getDistance(&mySONAR);
+      OLED_ClearBuffer(&myOLED);	//clear it
+      OLED_SetCursor(&myOLED, 0, 0); //move cursor to top left corner
 
-      if (strcmp(units, "feet") == 0){
+      dist = MAXSONAR_getDistance(&mySONAR) * 2; //maxsonar gets data (inches) //multiply by 2 as per profs suggestion, get 0-125 but expecting 0-255 (*2 is close enough scaler)
+
+
+
+      if (strcmp(units, "feet") == 0){ //if user selected feet, divide by 12
     	  dist = dist / 12;
       }
 
 
 
+      dist = (dist + lastData) / 2; //averaging out previous number and new number
 
-      if(dist < 4){
+      lastData = dist; //store old number for averaging next iteration
+
+      if(dist < led_threshholds[0]){ //set leds, if close 1 led, far is 4 leds
     	  led_data = 0;
-      }
-      else if(dist < 64){
+      }else if(dist < led_threshholds[1]){
     	  led_data = 1;
-      } else if (dist < 128){
+      }else if (dist < led_threshholds[2]){
     	  led_data = 3;
-      }else if (dist < 196){
+      }else if (dist < led_threshholds[3]){
     	  led_data = 7;
-      }else //256
+      }else //to max or 255 in or 21 ft
     	  led_data = 15;
-
-
       XGpio_DiscreteWrite(&LEDInst, 1, led_data);
 
-      sprintf(measure, "%lu ", dist); //convert int to string
-      strcat(measure, units);  //cat strings
+      sprintf(measured, "%lu ", dist); //convert int from sonar to string
+      strcat(measured, units);  //cat strings
 
-      OLED_PutString(&myDevice, measure); // output distance and unit
-      OLED_Update(&myDevice); //update
-      usleep(100000); //delay?
+      OLED_PutString(&myOLED, measured); // output string (distance and unit)
+      OLED_Update(&myOLED); //update screen
+      //usleep(100000); // delay (if not program crashes bc it polls too fast lol)
 
    }
-
-}
-
-void DemoCleanup() {
-   OLED_End(&myDevice);
-   DisableCaches();
-}
-
-void EnableCaches() {
-#ifdef __MICROBLAZE__
-#ifdef XPAR_MICROBLAZE_USE_ICACHE
-   Xil_ICacheEnable();
-#endif
-#ifdef XPAR_MICROBLAZE_USE_DCACHE
-   Xil_DCacheEnable();
-#endif
-#endif
-}
-
-void DisableCaches() {
-#ifdef __MICROBLAZE__
-#ifdef XPAR_MICROBLAZE_USE_DCACHE
-   Xil_DCacheDisable();
-#endif
-#ifdef XPAR_MICROBLAZE_USE_ICACHE
-   Xil_ICacheDisable();
-#endif
-#endif
 }
 
 
-//----------------------------------------------------
-// INITIAL SETUP FUNCTIONS
-//----------------------------------------------------
+
+
+void BTN_Intr_Handler(void *InstancePtr)
+
+{
+
+	// Disable GPIO interrupts
+
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+
+	// Ignore additional button presses
+
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
+
+			return;
+
+		}
+
+
+
+	int in[4] = {4, 64, 128, 196};
+
+	int ft[4] = {1, 5, 10, 15};
+
+
+
+	if (XGpio_DiscreteRead(&BTNInst, 1) > 0){
+
+		if (state == 1) {
+
+			units = "feet";
+
+			led_threshholds = ft;
+
+			state = 0;
+
+		}
+
+		else if (state == 0) {
+
+			units = "inches";
+
+			led_threshholds = in;
+
+			state = 1;
+
+		}
+
+	}
+
+
+
+    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+
+    // Enable GPIO interrupts
+
+    XGpio_InterruptEnable(&BTNInst, BTN_INT);
+
+}
+
+
 
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+
 {
+
 	// Enable interrupt
+
 	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+
 	XGpio_InterruptGlobalEnable(&BTNInst);
 
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
-			 	 	 	 	 	 XScuGicInstancePtr);
+
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, XScuGicInstancePtr);
+
 	Xil_ExceptionEnable();
 
 
+
 	return XST_SUCCESS;
 
+
+
 }
+
+
 
 int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
+
 {
+
 	XScuGic_Config *IntcConfig;
+
 	int status;
 
+
+
 	// Interrupt controller initialisation
+
 	IntcConfig = XScuGic_LookupConfig(DeviceId);
+
 	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+
 	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
 
 	// Call to interrupt setup
+
 	status = InterruptSystemSetup(&INTCInst);
+
 	if(status != XST_SUCCESS) return XST_FAILURE;
+
 	
+
 	// Connect GPIO interrupt to handler
-	status = XScuGic_Connect(&INTCInst,
-					  	  	 INTC_GPIO_INTERRUPT_ID,
-					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
-					  	  	 (void *)GpioInstancePtr);
+
+	status = XScuGic_Connect(&INTCInst, INTC_GPIO_INTERRUPT_ID, (Xil_ExceptionHandler)BTN_Intr_Handler, (void *)GpioInstancePtr);
+
 	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
 
 	// Enable GPIO interrupts interrupt
+
 	XGpio_InterruptEnable(GpioInstancePtr, 1);
+
 	XGpio_InterruptGlobalEnable(GpioInstancePtr);
 
+
+
 	// Enable GPIO and timer interrupts in the controller
+
 	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
+
 	
+
 	return XST_SUCCESS;
+
 }
+
 
 
