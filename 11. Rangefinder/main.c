@@ -47,7 +47,7 @@
 
 /************ Macro Definitions ************/
 
-#define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_BASEADDR
+#define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_1_AXI_LITE_GPIO_BASEADDR
 
 #ifdef __MICROBLAZE__
 #define CLK_FREQ XPAR_CPU_M_AXI_DP_FREQ_HZ
@@ -129,15 +129,20 @@ void DemoRun() {
 	   units = "inches";
 
    //outputting to display
-   char measure;
+   char *measure;
    u32 dist;
    while (1) {
       OLED_SetCharUpdate(&myDevice, 0);
       OLED_ClearBuffer(&myDevice);
       OLED_SetCursor(&myDevice, 0, 0); //top left corner
 
-      dist = 3;//dist = MAXSONAR_getDistance(&mySONAR);
-      sprintf(measure, "%d ", dist); //convert int to string
+      dist = MAXSONAR_getDistance(&mySONAR);
+
+      if (strcmp(units, "feet") == 0){
+    	  dist = dist / 12;
+      }
+
+      sprintf(measure, "%u ", dist); //convert int to string
       strcat(measure, units);  //cat strings
 
       OLED_PutString(&myDevice, measure); // output distance and unit
@@ -174,4 +179,3 @@ void DisableCaches() {
 #endif
 #endif
 }
-
