@@ -1,4 +1,4 @@
-//need .elf boot.bin and system.bif for SD card portabililty. It appears to boot fine without system.bif
+//need .elf boot.bin and system.bif for SD card portabililty. It appears to boot fine with just boot.bin
 #include "xgpio.h" //for leds and button
 #include "xscugic.h" //for interrupts
 #include "xil_exception.h" //needed when setting up interrupts
@@ -213,5 +213,3 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
 
 	return XST_SUCCESS;
 }
-
-
